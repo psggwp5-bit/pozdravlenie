@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>С днём рождения, IT-куб!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<main>
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <h1><span>С днём</span> <span>рождения,</span> <span class="nw">IT-куб!</span></h1>
+      <p class="lead">Открытка для тех, кто учит нас программировать, собирать роботов и придумывать новые миры. На каждой грани куба — пожелание одному из направлений.</p>
+      <button class="btn primary" id="launch" type="button">Запустить поздравление</button>
+    </div>
+
+    <div class="hero-cube">
+      <div class="scene" id="scene" tabindex="0" role="group"
+           aria-label="Куб с пожеланиями. Перетащите его или поворачивайте стрелками на клавиатуре.">
+        <div class="cube" id="cube"></div>
+        <div class="floor" aria-hidden="true"></div>
+      </div>
+      <p class="hint">Потяните куб мышкой или пальцем — или выберите направление</p>
+      <div class="chips" id="chips" role="group" aria-label="Направления"></div>
+      <div class="panel" id="panel" aria-live="polite">
+        <p class="panel-name" id="panelName">Шесть граней — шесть пожеланий</p>
+        <p class="panel-text" id="panelText">У каждого направления IT-куба своё пожелание. Поверните куб, чтобы его прочитать.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="letter wrap" id="letter" aria-labelledby="letterTitle">
+    <h2 id="letterTitle">Письмо от учеников</h2>
+    <div class="term" id="term">
+      <div class="term-bar">
+        <span class="term-file">pozdravlenie.sh</span>
+        <button class="term-btn" id="skip" type="button">Показать целиком</button>
+      </div>
+      <div class="term-body" id="termBody"></div>
+    </div>
+  </section>
+
+  <section class="lucky wrap" aria-labelledby="luckyTitle">
+    <h2 id="luckyTitle">Случайное пожелание</h2>
+    <div class="lucky-card">
+      <p class="lucky-text" id="wishText" aria-live="polite"></p>
+      <button class="btn" id="nextWish" type="button">Ещё пожелание</button>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>С любовью, ваши ученики, выпускники и родители</p>
+  <p>Открытка сделана на HTML, CSS и JavaScript</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
